@@ -2,7 +2,7 @@
 
 ## [Status](https://tc39.github.io/process-document/)
 
-**Stage**: 0
+**Stage**: Pre-0
 
 **Author**: Mike Piccolo (FullStack Labs, [@mfpiccolo](https://twitter.com/mfpiccolo))
 
