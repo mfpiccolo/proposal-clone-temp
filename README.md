@@ -25,7 +25,9 @@ These two StackOverflow questions have both been open for over ten years,are amo
 JavaScript has been moving towards immutable patterns.
 
 [immutable](https://www.npmjs.com/package/immutable) - ~2.5 million weekly downloads
+
 [redux](https://www.npmjs.com/package/redux) - ~3 million weekly downloads
+
 [immer](https://www.npmjs.com/package/immer) - ~2 million weekly downloads
 
 ## Object method
