@@ -68,7 +68,7 @@ const reducer = (state, action) =>
 
 ## Problems
 
-obj.cone() may clober userland implementations?
+obj.clone() may clobber userland implementations?
 
 ### Related Active Proposals
 
