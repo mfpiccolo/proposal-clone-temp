@@ -70,6 +70,13 @@ const reducer = (state, action) =>
 
 obj.clone() may clobber userland implementations?
 
+## Alternate Syntax
+```js
+Object.clone(obj, draft => draft.a.b.c = 1)
+```
+
 ### Related Active Proposals
 
 - [Structured Clone](https://github.com/dslomov/ecmascript-structured-clone)
+- [Const Value Types](https://github.com/rricard/proposal-const-value-types)
+- [Immutable Data Structures](https://github.com/sebmarkbage/ecmascript-immutable-data-structures)
