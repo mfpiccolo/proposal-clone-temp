@@ -35,7 +35,7 @@ JavaScript has been moving towards immutable patterns.
 ```js
 const test = { a: { b: { c: 1 } } }
 
-const copy = test.clone()
+const copy = Object.clone(test)
 assert(test.a.b.c === copy.a.b.c)
 ```
 
@@ -45,7 +45,7 @@ Following immer's api, you can update the new object
 
 ```js
 const test = { a: { b: { c: 1 } } }
-const copy2 = test.clone(draft => (draft.a.b.c = 2))
+const copy2 = Object.clone(test, draft => (draft.a.b.c = 2))
 assert(test.a.b.c !== copy2.a.b.c)
 assert(copy2.a.b.c === 2)
 ```
@@ -54,7 +54,7 @@ Example reducer
 
 ```js
 const reducer = (state, action) =>
-  state.clone(draft => {
+  Object.clone(state, draft => {
     switch (action.type) {
       case RECEIVE_PRODUCTS:
         action.products.forEach(product => {
@@ -64,15 +64,6 @@ const reducer = (state, action) =>
         draft[action.productId] = null
     }
   })
-```
-
-## Problems
-
-obj.clone() may clobber userland implementations?
-
-## Alternate Syntax
-```js
-Object.clone(obj, draft => draft.a.b.c = 1)
 ```
 
 ### Related Active Proposals
