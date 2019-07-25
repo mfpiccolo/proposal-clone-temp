@@ -61,7 +61,7 @@ const reducer = (state, action) =>
           draft[product.id] = product
         })
       case REMOVE_PRODUCT:
-        draft[action.productId] = null
+        delete draft[action.productId]
     }
   })
 ```
